@@ -1,0 +1,18 @@
+O que deve conter no portfolio:
+
+#1 - Header com redirecionamento ✅
+
+#2 - about contendo✅
+    #2.1 - Who I am?✅
+    #2.2 - tecnologias✅
+
+#3 - Card exibindo cada projeto com:
+    #3.1 - Titulo do projeto
+    #3.2 - imagem inicial
+    #3.3 - Descrição do projeto
+    #3.4 - Tecnologias utilizadas
+
+#4 - Contact-me deve ter:
+    #4.1 - Redes sociais com 
+        #4.1.1 - Icones
+        #4.1.2 - Link de redirecionamento

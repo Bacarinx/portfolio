@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.title {
+    @apply text-[50px] md:text-[70px] text-gray-950 font-bold md:text-start text-center
+}
+
+.subtitle {
+    @apply text-[35px] md:text-[50px] text-gray-800 font-bold md:text-start text-center
+}
+
+@media (min-width: 768px) {
+    .container-title{grid-area: title;}
+    .container-body{grid-area: body;}
+    .container-image{grid-area: img;}
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "title img"
+            "body img"
+    }
+}
