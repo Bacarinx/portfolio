@@ -26,7 +26,7 @@ const rowdies = Rowdies({
 export default function About() {
   return (
     <div
-      className={`${roboto.className} md:px-[15%] my-auto mt-6 md:mt-16 px-[8%]`}
+      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%]`}
     >
       <div className="about container" id="about">
         <h1 className={`${rowdies.className} title container-title`}>Sobre</h1>
@@ -51,7 +51,7 @@ export default function About() {
         />
       </div>
       <h1 className="mt-6 subtitle">Tecnologias</h1>
-      <div className="tecnologias flex gap-6 justify-center items-center mb-20 mt-6 flex-wrap">
+      <div className="tecnologias flex gap-6 justify-center md:justify-start items-center mb-20 mt-6 flex-wrap">
         <Tecnologia image={html} text={'Html'} />
         <Tecnologia image={css} text={'Css'} />
         <Tecnologia image={js} text={'Javascript'} />

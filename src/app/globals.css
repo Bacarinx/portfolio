@@ -23,4 +23,24 @@
             "title img"
             "body img"
     }
+
+    .project-img{grid-area: project-img}
+    .project-title{grid-area: project-title}
+    .project-body{grid-area: project-body}
+    .project-footer{grid-area: project-footer}
+    .project-tecs{grid-area: project-tecs}
+    .project-btns{grid-area: project-btns}
+
+    .project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            " project-title project-title "
+            " project-img project-body "
+            " project-footer project-footer "
+        }
 }
+
+
+

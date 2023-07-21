@@ -31,11 +31,40 @@ const roboto = Roboto({
 export default function Projects() {
   return (
     <div
-      className={`${roboto.className} md:px-[15%] my-auto mt-6 md:mt-16 px-[8%]`}
+      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%]`}
+      id="projects"
     >
       <h1 className={`${rowdies.className} title`}>Principais Projetos</h1>
-      <div>
-        <Project image={} title={} body={} tecs={[ts, next, tailwind]} />
+      <div className="mt-4 flex flex-col md:flex-row gap-4">
+        <Project
+          site="https://lp-veterinaria.vercel.app/"
+          repositorio="https://github.com/Bacarinx/lp-veterinaria"
+          image={veterinaria}
+          title={'LP-Veterinária'}
+          body={
+            'Neste projeto, foi tido como inspiração e como clone a página "ERP Veterinária", em que pela primeira vez coloquei em prática as habilidades em NextJs e TailwindCss.'
+          }
+          tecs={[
+            { name: 'ts', link: ts },
+            { name: 'next', link: next },
+            { name: 'tailwind', link: tailwind },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/projeto-Bootstrap/"
+          repositorio="https://github.com/Bacarinx/projeto-Bootstrap"
+          image={projBootstrap}
+          title={'Projeto Bootstrap'}
+          body={
+            'Este site foi concluido ao final do mini curso de BootStrap que eu havia feito. Como finalização, coloquei em prática tudo o que havia aprendido durante o curso.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
+            { name: 'bootstrap', link: bootstrap },
+          ]}
+        />
       </div>
     </div>
   )
