@@ -23,7 +23,9 @@
             "title img"
             "body img"
     }
+}
 
+@media (min-width: 1280px) {
     .project-img{grid-area: project-img}
     .project-title{grid-area: project-title}
     .project-body{grid-area: project-body}
@@ -41,6 +43,9 @@
             " project-footer project-footer "
         }
 }
+
+
+
 
 
 

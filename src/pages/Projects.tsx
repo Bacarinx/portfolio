@@ -31,11 +31,11 @@ const roboto = Roboto({
 export default function Projects() {
   return (
     <div
-      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%]`}
+      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%] `}
       id="projects"
     >
       <h1 className={`${rowdies.className} title`}>Principais Projetos</h1>
-      <div className="mt-4 flex flex-col md:flex-row gap-4">
+      <div className="mt-4 flex flex-col md:flex-row gap-4 md:flex-wrap">
         <Project
           site="https://lp-veterinaria.vercel.app/"
           repositorio="https://github.com/Bacarinx/lp-veterinaria"
@@ -63,6 +63,76 @@ export default function Projects() {
             { name: 'css', link: css },
             { name: 'js', link: js },
             { name: 'bootstrap', link: bootstrap },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/Nlw/"
+          repositorio="https://github.com/Bacarinx/Nlw"
+          image={nlw}
+          title={'NLW Esports'}
+          body={
+            'Primeiro site que desenvolvi, logo quando descobri o mundo da programação. Desenvolvido durante o projeto "Next Level" da Rocket Seat.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/desafio01-teamplate/"
+          repositorio="https://github.com/Bacarinx/desafio01-teamplate"
+          image={desafio1}
+          title={'Card NFT'}
+          body={
+            'Esse site foi o 1° Desafio realizado pelo site "Front-end Mentor", em que o desafio se baseava na construção de um Card para NFT.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/desafio02-landingpage/"
+          repositorio="https://github.com/Bacarinx/desafio02-landingpage"
+          image={desafio2}
+          title={'Landing page Filo'}
+          body={
+            'Esse site foi o 2° Desafio realizado pelo site "Front-end Mentor", em que o desafio se baseava na construção de uma lading page contendo as informações principais da página, como as informações sobre a empresa, o meio de contato, etc.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/news-homepage/"
+          repositorio="https://github.com/Bacarinx/news-homepage"
+          image={desafio3}
+          title={'News Homepage'}
+          body={
+            'Esse site foi o 3° Desafio realizado pelo site "Front-end Mentor", em que foi desenvolvida a parte de apresentação de um blog/site de notícas contendo as principais noticias e a divisão de páginas.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
+          ]}
+        />
+        <Project
+          site="https://bacarinx.github.io/projeto-calculadora/"
+          repositorio="https://github.com/Bacarinx/projeto-calculadora"
+          image={calculadora}
+          title={'Calculadora'}
+          body={
+            'Projeto desenvolvido durante o curso de Javascript do canal do Matheus Battisti, onde é feita uma calculadora que é capaz de realizar todas as operações. Neste projeto foi posto em uso o aprendizado de Javascript.'
+          }
+          tecs={[
+            { name: 'html', link: html },
+            { name: 'css', link: css },
+            { name: 'js', link: js },
           ]}
         />
       </div>

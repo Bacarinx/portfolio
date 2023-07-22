@@ -1,6 +1,6 @@
 import Tecnologia from '@/app/components/Tecnologia'
 import { Rowdies, Roboto } from '@next/font/google'
-import foto from '../../public/data/FotoPessoal.png'
+import foto from '../../public/data/fotoPessoal.png'
 import html from '../../public/data/tecnologias/html.svg'
 import css from '../../public/data/tecnologias/css.svg'
 import js from '../../public/data/tecnologias/js.svg'
