@@ -1,5 +1,5 @@
 import Tecnologia from '@/app/components/Tecnologia'
-import { Rowdies, Roboto } from '@next/font/google'
+import { Roboto, Roboto_Mono } from '@next/font/google'
 import foto from '../../public/data/fotoPessoal.png'
 import html from '../../public/data/tecnologias/html.svg'
 import css from '../../public/data/tecnologias/css.svg'
@@ -18,7 +18,7 @@ const roboto = Roboto({
   weight: ['400', '700'],
 })
 
-const rowdies = Rowdies({
+const robotoMono = Roboto_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
 })
@@ -26,16 +26,18 @@ const rowdies = Rowdies({
 export default function About() {
   return (
     <div
-      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%]`}
+      className={`${roboto.className} md:px-[10%] my-auto pt-6 md:pt-16 px-[8%]`}
     >
-      <div className="about container" id="about">
-        <h1 className={`${rowdies.className} title container-title`}>Sobre</h1>
-        <div className="container-body md:mb-6 mb-4 text-center md:text-start">
-          <p>
+      <div className="about container" id="sobre">
+        <h1 className={`${robotoMono.className} title container-title`}>
+          Sobre
+        </h1>
+        <div className="container-body md:mb-6 mb-4 text-center md:text-start opacity-80">
+          <p className="mb-2">
             Olá, eu sou o Henrique. Nasci em 2005, em São Paulo, e minha paixão
             pela tecnologia vem desde criança, mas comecei a programar mesmo em
             começo de 2022. Minha paixão sempre foi pelo
-            <span className="font-bold"> Front-end</span>.
+            <a className="font-bold inline"> Front-end</a>.
           </p>
           <p>
             Ainda sou apenas um estudante de programação, indo em busca da sua
@@ -50,7 +52,8 @@ export default function About() {
           height={0}
         />
       </div>
-      <h1 className="mt-6 subtitle">Tecnologias</h1>
+      <hr />
+      <h1 className={`${robotoMono.className} mt-6 subtitle`}>Tecnologias</h1>
       <div className="tecnologias flex gap-6 justify-center md:justify-start items-center mb-20 mt-6 flex-wrap">
         <Tecnologia image={html} text={'Html'} />
         <Tecnologia image={css} text={'Css'} />
@@ -63,6 +66,7 @@ export default function About() {
         <Tecnologia image={git} text={'Git'} />
         <Tecnologia image={github} text={'Github'} />
       </div>
+      <hr />
     </div>
   )
 }

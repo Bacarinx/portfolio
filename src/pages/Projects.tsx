@@ -1,10 +1,9 @@
 import Project from '@/app/components/Project'
-import { Rowdies, Roboto } from '@next/font/google'
+import { Roboto, Roboto_Mono } from '@next/font/google'
 
 import html from '../../public/data/tecnologias/html.svg'
 import css from '../../public/data/tecnologias/css.svg'
 import js from '../../public/data/tecnologias/js.svg'
-import react from '../../public/data/tecnologias/react-original.svg'
 import next from '../../public/data/tecnologias/nextjs-original.svg'
 import tailwind from '../../public/data/tecnologias/tailwindcss-plain.svg'
 import bootstrap from '../../public/data/tecnologias/bootstrap-original.svg'
@@ -18,7 +17,7 @@ import desafio3 from '../../public/data/projects/desafio3.jpeg'
 import nlw from '../../public/data/projects/nlw.jpeg'
 import veterinaria from '../../public/data/projects/veterinaria.jpeg'
 
-const rowdies = Rowdies({
+const robotoMono = Roboto_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
 })
@@ -31,10 +30,12 @@ const roboto = Roboto({
 export default function Projects() {
   return (
     <div
-      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%] `}
-      id="projects"
+      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%] text-white`}
+      id="projetos"
     >
-      <h1 className={`${rowdies.className} title`}>Principais Projetos</h1>
+      <h1 className={`${robotoMono.className} title mb-6`}>
+        Principais Projetos
+      </h1>
       <div className="mt-4 flex flex-col md:flex-row gap-4 md:flex-wrap">
         <Project
           site="https://lp-veterinaria.vercel.app/"
@@ -76,7 +77,6 @@ export default function Projects() {
           tecs={[
             { name: 'html', link: html },
             { name: 'css', link: css },
-            { name: 'js', link: js },
           ]}
         />
         <Project
@@ -90,7 +90,6 @@ export default function Projects() {
           tecs={[
             { name: 'html', link: html },
             { name: 'css', link: css },
-            { name: 'js', link: js },
           ]}
         />
         <Project
@@ -104,7 +103,6 @@ export default function Projects() {
           tecs={[
             { name: 'html', link: html },
             { name: 'css', link: css },
-            { name: 'js', link: js },
           ]}
         />
         <Project
@@ -118,7 +116,6 @@ export default function Projects() {
           tecs={[
             { name: 'html', link: html },
             { name: 'css', link: css },
-            { name: 'js', link: js },
           ]}
         />
         <Project

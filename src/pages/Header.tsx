@@ -1,25 +1,27 @@
 'use client'
 
-import Image from 'next/image'
-import logo from '../../public/data/download.jpg'
 import { useState } from 'react'
+
+import { Roboto_Mono } from '@next/font/google'
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false)
 
   return (
-    <header className={`bg-black text-white md:px-[10%]`}>
+    <header id="home" className={`bg-slate-900 text-white md:px-[10%]`}>
       <nav
-        className={`flex justify-around md:justify-between py-4 items-center`}
+        className={`flex justify-around md:justify-between py-6 items-center`}
       >
-        <a href="#home">
-          <Image
-            className={`w-[150px] h-[150px] rounded-full`}
-            src={logo}
-            alt="logo"
-            width={0}
-            height={0}
-          />
+        <a
+          href="#home"
+          className={`text-3xl font-bold ${robotoMono.className}`}
+        >
+          Bacarin.Dev
         </a>
         <div className="md:hidden">
           <button
@@ -64,16 +66,16 @@ export default function Header() {
         >
           <ul className="items-center justify-start space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li className="text-white">
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li className="text-white">
-              <a href="#about">Sobre</a>
+              <a href="#sobre">Sobre</a>
             </li>
             <li className="text-white">
-              <a href="#projects">Projetos</a>
+              <a href="#projetos">Projetos</a>
             </li>
             <li className="text-white">
-              <a href="#contact">Contact-me</a>
+              <a href="#contato">Contato</a>
             </li>
           </ul>
         </div>

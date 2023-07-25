@@ -1,8 +1,11 @@
-'use client'
-
+import { Roboto_Mono } from '@next/font/google'
 import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
 import { BsFillArrowUpRightSquareFill, BsGithub } from 'react-icons/bs'
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 interface ProjectProps {
   site: string
@@ -21,21 +24,13 @@ export default function Project({
   site,
   repositorio,
 }: ProjectProps) {
-  const [content, setContent] = useState<boolean>(false)
-
-  function handleBody() {
-    setContent(!content)
-  }
-
-  if (!content) {
-    body = body.substring(0, 160) + ' [...]'
-  }
-
   return (
     <div
-      className={`w-[100%] md:w-[48%] flex border xl:flex-row border-zinc-900 rounded-lg flex-col p-2 md:px-6 md:gap-3 text-gray-950 project m-auto`}
+      className={`w-[100%] md:w-[48%] 2xl:w-[32%] flex border xl:flex-row border-zinc-300 rounded-lg flex-col p-2 md:px-6 md:gap-3 text-white project mx-auto`}
     >
-      <h1 className="text-3xl md:text-3xl font-bold project-title text-center my-4 md:mb-2">
+      <h1
+        className={`${robotoMono.className} opacity-90 text-3xl md:text-3xl font-bold project-title text-center my-4 md:mb-2`}
+      >
         {title}
       </h1>
       <Image
@@ -45,10 +40,8 @@ export default function Project({
         width={0}
         height={0}
       />
-      <p onClick={handleBody} className="text-zinc-800 project-body">
-        {body}
-      </p>
-      <div className="project-footer flex justify-between xl:flex-row gap-2 flex-col">
+      <p className="opacity-70 project-body">{body}</p>
+      <div className="project-footer flex justify-between xl:flex-row 2xl:flex-col gap-2 flex-col">
         <div className="flex justify-start gap-3 project-tecs">
           {tecs.map((tec) => (
             <Image
@@ -62,10 +55,10 @@ export default function Project({
             />
           ))}
         </div>
-        <div className="flex gap-2 text-center project-btns">
+        <div className="flex gap-2 text-center project-btns pb-4 items-center">
           <a
             target="_blank"
-            className="xl:w-[auto] w-[50%] px-4 m-auto py-3 rounded-md bg-purple-900 duration-200 hover:bg-purple-950 text-white flex items-center justify-center gap-4"
+            className="xl:w-[auto] w-[50%] 2xl:w-[50%] px-4 m-auto py-3 rounded-md bg-purple-900 duration-200 hover:bg-purple-950 text-white flex items-center justify-center gap-4"
             href={site}
           >
             Site
@@ -73,7 +66,7 @@ export default function Project({
           </a>
           <a
             target="_blank"
-            className="xl:w-[auto] w-[50%] px-4 m-auto py-3 rounded-md bg-gray-900 duration-200 hover:bg-gray-950 text-white flex items-center justify-center gap-4"
+            className="xl:w-[auto] w-[50%] 2xl:w-[50%] px-4 m-auto py-3 rounded-md bg-gray-900 duration-200 hover:bg-gray-950 text-white flex items-center justify-center gap-4"
             href={repositorio}
           >
             Repositório

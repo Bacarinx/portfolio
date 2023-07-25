@@ -1,5 +1,5 @@
 import About from '@/pages/About'
-import Header from '@/pages/Header'
+
 import Projects from '@/pages/Projects'
 import { Oxygen } from '@next/font/google'
 
@@ -10,8 +10,7 @@ const oxygen = Oxygen({
 
 export default function Home() {
   return (
-    <div className={`${oxygen.className} mb-80`}>
-      <Header />
+    <div className={`${oxygen.className} pb-40 bg-slate-800 text-white`}>
       <About />
       <Projects />
     </div>

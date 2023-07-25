@@ -7,7 +7,7 @@ interface TecnologiaProps {
 
 export default function Tecnologia(props: TecnologiaProps) {
   return (
-    <div className="md:w-[7%] w-[14%]  hover:scale-110 duration-200">
+    <div className="md:w-[5%] w-[14%]  hover:scale-110 duration-200">
       <Image
         className=""
         title={props.text}
