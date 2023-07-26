@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Header from '@/pages/Header'
 import Footer from '@/pages/Footer'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 export const metadata: Metadata = {
   title: 'Henrique Bacarin | Front-end Developer',
@@ -21,11 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <ThemeProvider>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   )
 }

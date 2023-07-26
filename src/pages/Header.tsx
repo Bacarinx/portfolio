@@ -3,6 +3,7 @@
 import { useState } from 'react'
 
 import { Roboto_Mono } from '@next/font/google'
+import ThemeMode from '@/app/components/ThemeMode'
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],
@@ -79,6 +80,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <ThemeMode />
       </nav>
     </header>
   )

@@ -1,6 +1,9 @@
+'use client'
+
 import { Roboto_Mono } from '@next/font/google'
 import Image, { StaticImageData } from 'next/image'
 import { BsFillArrowUpRightSquareFill, BsGithub } from 'react-icons/bs'
+import useTheme from '../hooks/useTheme'
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],
@@ -24,9 +27,13 @@ export default function Project({
   site,
   repositorio,
 }: ProjectProps) {
+  const { theme } = useTheme()
+
   return (
     <div
-      className={`w-[100%] md:w-[48%] 2xl:w-[32%] flex border xl:flex-row border-zinc-300 rounded-lg flex-col p-2 md:px-6 md:gap-3 text-white project mx-auto`}
+      className={`${
+        theme === 'dark' ? 'text-white' : 'text-black'
+      } w-[100%] md:w-[48%] 2xl:w-[32%] flex border xl:flex-row border-zinc-300 rounded-lg flex-col p-2 md:px-6 md:gap-3  project mx-auto`}
     >
       <h1
         className={`${robotoMono.className} opacity-90 text-3xl md:text-3xl font-bold project-title text-center my-4 md:mb-2`}

@@ -1,6 +1,8 @@
+'use client'
+
 import Tecnologia from '@/app/components/Tecnologia'
 import { Roboto, Roboto_Mono } from '@next/font/google'
-import foto from '../../public/data/fotoPessoal.png'
+import foto from '../../public/data/fotoPessoal.jpg'
 import html from '../../public/data/tecnologias/html.svg'
 import css from '../../public/data/tecnologias/css.svg'
 import js from '../../public/data/tecnologias/js.svg'
@@ -12,6 +14,7 @@ import git from '../../public/data/tecnologias/git-original.svg'
 import github from '../../public/data/tecnologias/github-original.svg'
 import typescript from '../../public/data/tecnologias/typescript-original.svg'
 import Image from 'next/image'
+import useTheme from '@/app/hooks/useTheme'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -24,9 +27,13 @@ const robotoMono = Roboto_Mono({
 })
 
 export default function About() {
+  const { theme } = useTheme()
+
   return (
     <div
-      className={`${roboto.className} md:px-[10%] my-auto pt-6 md:pt-16 px-[8%]`}
+      className={`${roboto.className} ${
+        theme === 'dark' ? 'bg-slate-800 text-white' : 'bg-white text-black'
+      } md:px-[10%]  my-auto pt-6 md:pt-16 px-[8%]`}
     >
       <div className="about container" id="sobre">
         <h1 className={`${robotoMono.className} title container-title`}>
@@ -52,7 +59,11 @@ export default function About() {
           height={0}
         />
       </div>
-      <hr />
+      <hr
+        className={`${
+          theme === 'dark' ? 'bg-white' : 'bg-black'
+        }  border-none h-[1px]`}
+      />
       <h1 className={`${robotoMono.className} mt-6 subtitle`}>Tecnologias</h1>
       <div className="tecnologias flex gap-6 justify-center md:justify-start items-center mb-20 mt-6 flex-wrap">
         <Tecnologia image={html} text={'Html'} />
@@ -66,7 +77,11 @@ export default function About() {
         <Tecnologia image={git} text={'Git'} />
         <Tecnologia image={github} text={'Github'} />
       </div>
-      <hr />
+      <hr
+        className={`${
+          theme === 'dark' ? 'bg-white' : 'bg-black'
+        }  border-none h-[1px]`}
+      />
     </div>
   )
 }

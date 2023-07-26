@@ -44,6 +44,46 @@
         }
 }
 
+.label {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    padding: 5px;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translatex(24px);
+}
+
+.ball {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    position: absolute; 
+    border-radius: 100%;
+    transition: transform 0.2s linear;
+}
+
+.fa-moon{
+    color: #f1c40f
+}
+
+.fa-sun {
+    color: #f39c12
+}
+
 
 
 

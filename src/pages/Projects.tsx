@@ -1,3 +1,5 @@
+'use client'
+
 import Project from '@/app/components/Project'
 import { Roboto, Roboto_Mono } from '@next/font/google'
 
@@ -16,6 +18,7 @@ import desafio2 from '../../public/data/projects/desafio2.jpeg'
 import desafio3 from '../../public/data/projects/desafio3.jpeg'
 import nlw from '../../public/data/projects/nlw.jpeg'
 import veterinaria from '../../public/data/projects/veterinaria.jpeg'
+import useTheme from '@/app/hooks/useTheme'
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],
@@ -28,9 +31,12 @@ const roboto = Roboto({
 })
 
 export default function Projects() {
+  const { theme } = useTheme()
   return (
     <div
-      className={`${roboto.className} md:px-[10%] my-auto mt-6 md:mt-16 px-[8%] text-white`}
+      className={`${roboto.className} ${
+        theme === 'dark' ? 'bg-slate-800 text-white' : 'bg-white text-black'
+      } md:px-[10%] my-auto pt-6 md:pt-16 px-[8%] pb-20 md:pb-40`}
       id="projetos"
     >
       <h1 className={`${robotoMono.className} title mb-6`}>
