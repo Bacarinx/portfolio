@@ -32,8 +32,10 @@ export default function Project({
   return (
     <div
       className={`${
-        theme === 'dark' ? 'text-white' : 'text-black'
-      } w-[100%] md:w-[48%] 2xl:w-[32%] flex border xl:flex-row border-zinc-300 rounded-lg flex-col p-2 md:px-6 md:gap-3  project mx-auto`}
+        theme === 'dark'
+          ? 'text-white border-zinc-300 shadow-zinc-600'
+          : 'text-black border-black shadow-zinc-500'
+      } w-[100%] md:w-[48%] 2xl:w-[32%] flex border xl:flex-row  rounded-lg flex-col p-2 md:px-6 md:gap-3  project mx-auto shadow-md`}
     >
       <h1
         className={`${robotoMono.className} opacity-90 text-3xl md:text-3xl font-bold project-title text-center my-4 md:mb-2`}
