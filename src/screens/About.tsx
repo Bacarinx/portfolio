@@ -1,6 +1,6 @@
 'use client'
 
-import Tecnologia from '@/app/components/Tecnologia'
+import Tecnologia from '../components/Tecnologia'
 import { Roboto, Roboto_Mono } from '@next/font/google'
 import foto from '../../public/data/fotoPessoal.jpg'
 import html from '../../public/data/tecnologias/html.svg'
@@ -14,7 +14,7 @@ import git from '../../public/data/tecnologias/git-original.svg'
 import github from '../../public/data/tecnologias/github-original.svg'
 import typescript from '../../public/data/tecnologias/typescript-original.svg'
 import Image from 'next/image'
-import useTheme from '@/app/hooks/useTheme'
+import useTheme from '../hooks/useTheme'
 
 const roboto = Roboto({
   subsets: ['latin'],

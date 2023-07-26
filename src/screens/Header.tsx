@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 import { Roboto_Mono } from '@next/font/google'
-import ThemeMode from '@/app/components/ThemeMode'
+import ThemeMode from '@/components/ThemeMode'
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],

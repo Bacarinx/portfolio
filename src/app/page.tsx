@@ -1,5 +1,5 @@
-import About from '@/pages/About'
-import Projects from '@/pages/Projects'
+import About from '../screens/About'
+import Projects from '../screens/Projects'
 import { Oxygen } from '@next/font/google'
 
 const oxygen = Oxygen({

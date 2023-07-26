@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Header from '@/pages/Header'
-import Footer from '@/pages/Footer'
-import { ThemeProvider } from './contexts/ThemeContext'
+import Header from '../screens/Header'
+import Footer from '../screens/Footer'
+import { ThemeProvider } from '../contexts/ThemeContext'
 
 export const metadata: Metadata = {
   title: 'Henrique Bacarin | Front-end Developer',

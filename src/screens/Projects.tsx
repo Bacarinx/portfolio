@@ -1,6 +1,6 @@
 'use client'
 
-import Project from '@/app/components/Project'
+import Project from '@/components/Project'
 import { Roboto, Roboto_Mono } from '@next/font/google'
 
 import html from '../../public/data/tecnologias/html.svg'
@@ -18,7 +18,7 @@ import desafio2 from '../../public/data/projects/desafio2.jpeg'
 import desafio3 from '../../public/data/projects/desafio3.jpeg'
 import nlw from '../../public/data/projects/nlw.jpeg'
 import veterinaria from '../../public/data/projects/veterinaria.jpeg'
-import useTheme from '@/app/hooks/useTheme'
+import useTheme from '@/hooks/useTheme'
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],
